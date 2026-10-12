@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="LK MDCAT Academy — learn, revise, and practise for the MDCAT.">
+<title>LK MDCAT Academy | Learn. Practise. Succeed.</title>
+<style>
+:root{--navy:#102a43;--blue:#1769aa;--teal:#16a6a1;--pale:#eef8fb;--ink:#243b53;--muted:#627d98;--white:#fff;--line:#d9e7ee;--gold:#ffd166}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:#f8fbfd;line-height:1.6}a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}
+header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:11px;font-weight:850;color:var(--navy);letter-spacing:-.4px}.logo{display:grid;place-items:center;width:44px;height:44px;border-radius:14px;background:linear-gradient(135deg,var(--blue),var(--teal));color:white;font-weight:900;font-size:17px}.links{display:flex;gap:24px;align-items:center;font-size:14px;font-weight:650}.links a:hover{color:var(--blue)}.menu{display:none;border:0;background:var(--pale);padding:9px 12px;border-radius:9px;font-size:20px}
+.hero{background:radial-gradient(circle at 85% 15%,#d9f7f1 0,transparent 32%),linear-gradient(120deg,#edf7ff,#f7fcff);padding:76px 0 70px;overflow:hidden}.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:48px}.eyebrow{display:inline-flex;align-items:center;gap:8px;background:#dff6f3;color:#087e79;border-radius:100px;padding:7px 13px;font-size:12px;font-weight:800;letter-spacing:.7px;text-transform:uppercase}.hero h1{font-size:clamp(38px,5vw,62px);line-height:1.08;letter-spacing:-2px;color:var(--navy);margin:20px 0}.hero h1 span{color:var(--blue)}.hero p{max-width:560px;color:var(--muted);font-size:18px;margin:0 0 28px}.actions{display:flex;gap:12px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:12px;padding:13px 19px;font-size:15px;font-weight:800;cursor:pointer;transition:transform .15s,box-shadow .15s}.btn:hover{transform:translateY(-2px)}.primary{background:var(--blue);color:#fff;box-shadow:0 8px 20px #1769aa2c}.secondary{background:white;border:1px solid var(--line);color:var(--navy)}.hero-card{background:#fff;border:1px solid #e2edf2;border-radius:28px;padding:27px;box-shadow:0 22px 55px #163b5a12;transform:rotate(1deg)}.card-top{display:flex;justify-content:space-between;align-items:center;gap:12px}.pill{background:#fff4d7;color:#8b6400;border-radius:100px;padding:6px 10px;font-size:11px;font-weight:800}.hero-card h3{margin:20px 0 5px;color:var(--navy);font-size:23px}.hero-card p{font-size:14px;margin:0 0 18px}.subject-list{display:grid;gap:10px}.subject{display:flex;align-items:center;gap:12px;background:#f6fafc;padding:12px;border-radius:13px;font-weight:700;font-size:14px}.subject-icon{display:grid;place-items:center;width:38px;height:38px;background:#e2f4fa;border-radius:11px;font-size:20px}.subject small{display:block;font-weight:500;color:var(--muted)}
+.stats{background:var(--navy);color:#fff;padding:23px 0}.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;text-align:center}.stat strong{display:block;font-size:22px}.stat span{font-size:12px;color:#c3d8e8}
+section{padding:72px 0}.section-head{text-align:center;max-width:650px;margin:0 auto 34px}.kicker{color:var(--teal);font-size:12px;text-transform:uppercase;letter-spacing:1.5px;font-weight:900}.section-head h2{color:var(--navy);font-size:clamp(28px,3vw,39px);letter-spacing:-1px;line-height:1.15;margin:9px 0 12px}.section-head p{color:var(--muted);margin:0}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.feature{background:#fff;border:1px solid var(--line);border-radius:18px;padding:23px;box-shadow:0 7px 22px #163b5a06}.feature .emoji{font-size:27px}.feature h3{color:var(--navy);margin:12px 0 6px}.feature p{font-size:14px;color:var(--muted);margin:0}.feature a{display:inline-block;color:var(--blue);font-weight:800;font-size:13px;margin-top:15px}
+.quiz-area{background:#edf7fb}.quiz{max-width:760px;margin:auto;background:white;border:1px solid var(--line);border-radius:22px;padding:28px;box-shadow:0 12px 35px #163b5a0b}.quiz-top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}.quiz-top h3{margin:0;color:var(--navy)}.progress{height:7px;background:#e5eff4;border-radius:100px;overflow:hidden;margin:18px 0 24px}.progress div{height:100%;width:0;background:linear-gradient(90deg,var(--blue),var(--teal));transition:width .25s}.question{font-size:19px;font-weight:800;color:var(--navy);margin:0 0 17px}.answers{display:grid;gap:10px}.answer{width:100%;text-align:left;border:1px solid var(--line);border-radius:12px;padding:13px 15px;background:#fff;color:var(--ink);font:inherit;cursor:pointer}.answer:hover:not(:disabled){border-color:var(--blue);background:#f2f9ff}.answer.correct{border-color:#16a34a;background:#effbf2}.answer.wrong{border-color:#dc5656;background:#fff1f1}.feedback{min-height:27px;margin:14px 0;color:var(--muted);font-weight:700}.quiz-bottom{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}.small-note{font-size:12px;color:var(--muted)}
+.cta{background:linear-gradient(120deg,var(--navy),#164e77);color:white;border-radius:26px;padding:38px;display:flex;justify-content:space-between;align-items:center;gap:24px}.cta h2{font-size:clamp(25px,3vw,36px);line-height:1.15;margin:0 0 8px}.cta p{color:#d0e2ef;margin:0}.cta .btn{background:var(--gold);color:#273746;white-space:nowrap}
+footer{background:#0b2033;color:#d1e1ec;padding:28px 0}.footer-row{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;align-items:center}.footer-brand{font-weight:850;color:white}.footer-note{font-size:12px;color:#a8c0d1;max-width:560px}
+@media(max-width:800px){.hero-grid{grid-template-columns:1fr;gap:30px}.hero{padding:55px 0}.hero-card{transform:none;max-width:540px}.grid{grid-template-columns:repeat(2,1fr)}.links{display:none;position:absolute;left:0;right:0;top:76px;padding:20px 4%;background:#fff;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}.links.open{display:flex}.menu{display:block}.cta{align-items:flex-start;flex-direction:column}}
+@media(max-width:520px){.grid{grid-template-columns:1fr}.stats-grid{gap:8px}.stat strong{font-size:19px}.stat span{font-size:11px}.hero h1{letter-spacing:-1px}.quiz{padding:20px}.cta{padding:27px}.brand{font-size:14px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home" aria-label="LK MDCAT Academy home"><span class="logo">LK</span><span>LK MDCAT Academy</span></a>
+    <nav class="links" id="navLinks">
+      <a href="#subjects">Subjects</a><a href="#practice">Practice Quiz</a><a href="#about">About</a><a href="#contact">Contact</a>
+    </nav>
+    <button class="menu" id="menuBtn" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+  </div>
+</header>
+<main>
+  <section class="hero" id="home">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">🎓 Your MDCAT learning companion</span>
+        <h1>Learn today.<br><span>Become a doctor</span><br>tomorrow.</h1>
+        <p>Build strong concepts, revise important topics, and practise MCQs — one focused study session at a time.</p>
+        <div class="actions"><a class="btn primary" href="#subjects">Explore subjects ↗</a><a class="btn secondary" href="#practice">Try a practice quiz</a></div>
+      </div>
+      <div class="hero-card">
+        <div class="card-top"><span class="eyebrow">Your study hub</span><span class="pill">MDCAT PREP</span></div>
+        <h3>Make every study session count.</h3>
+        <p>Choose a subject and keep moving towards your goal.</p>
+        <div class="subject-list">
+          <div class="subject"><span class="subject-icon">🧬</span><span>Biology<small>Concepts & revision</small></span></div>
+          <div class="subject"><span class="subject-icon">⚗️</span><span>Chemistry<small>Understand the reactions</small></span></div>
+          <div class="subject"><span class="subject-icon">⚡</span><span>Physics<small>Build problem-solving skills</small></span></div>
+          <div class="subject"><span class="subject-icon">📘</span><span>English & reasoning<small>Practise step by step</small></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="stats"><div class="wrap stats-grid"><div class="stat"><strong>Learn</strong><span>Strengthen your concepts</span></div><div class="stat"><strong>Practise</strong><span>Test your understanding</span></div><div class="stat"><strong>Improve</strong><span>Learn from every answer</span></div></div></div>
+  <section id="subjects">
+    <div class="wrap">
+      <div class="section-head"><span class="kicker">Study resources</span><h2>Explore your subjects</h2><p>Start with the subject you want to improve. These cards are ready for you to connect to your own notes and lessons.</p></div>
+      <div class="grid">
+        <article class="feature"><span class="emoji">🧬</span><h3>Biology</h3><p>Cell biology, genetics, human physiology, and other core concepts.</p><a href="#practice">Practise a question →</a></article>
+        <article class="feature"><span class="emoji">⚗️</span><h3>Chemistry</h3><p>Build understanding of chemical bonding, reactions, and calculations.</p><a href="#practice">Practise a question →</a></article>
+        <article class="feature"><span class="emoji">⚡</span><h3>Physics</h3><p>Review formulas and practise applying them to problems.</p><a href="#practice">Practise a question →</a></article>
+        <article class="feature"><span class="emoji">📖</span><h3>English</h3><p>Work on vocabulary, grammar, and reading comprehension.</p><a href="#practice">Practise a question →</a></article>
+        <article class="feature"><span class="emoji">🧠</span><h3>Logical Reasoning</h3><p>Practise identifying patterns, relationships, and valid conclusions.</p><a href="#practice">Practise a question →</a></article>
+        <article class="feature"><span class="emoji">📝</span><h3>Mock Tests</h3><p>Use timed practice sets to check what you know and what to revise.</p><a href="#practice">Try sample quiz →</a></article>
+      </div>
+    </div>
+  </section>
+  <section class="quiz-area" id="practice">
+    <div class="wrap">
+      <div class="section-head"><span class="kicker">Check your understanding</span><h2>Quick practice quiz</h2><p>Practise 15 starter MCQs across five subjects. Choose a subject, answer each question, and see explanations.</p></div>
+      <div class="quiz">
+        <div style="display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-bottom:18px">
+          <label for="subjectFilter" style="font-weight:800;color:var(--navy)">Choose a subject</label>
+          <select id="subjectFilter" style="border:1px solid var(--line);border-radius:10px;padding:10px 12px;font:inherit;background:#fff;color:var(--ink)">
+            <option value="All">All subjects</option>
+            <option value="Biology">Biology</option>
+            <option value="Chemistry">Chemistry</option>
+            <option value="Physics">Physics</option>
+            <option value="English">English</option>
+            <option value="Logical Reasoning">Logical Reasoning</option>
+          </select>
+        </div>
+        <div class="quiz-top"><h3 id="quizCount">Question 1</h3><span class="pill" id="subjectPill">QUESTION BANK</span></div>
+        <div class="progress"><div id="progressFill"></div></div>
+        <p class="question" id="questionText">Which molecule stores genetic information in most living organisms?</p>
+        <div class="answers" id="answers"></div>
+        <div class="feedback" id="feedback" aria-live="polite"></div>
+        <div class="quiz-bottom"><span class="small-note" id="scoreText">Score: 0</span><button class="btn primary" id="nextBtn" disabled>Next question →</button></div>
+      </div>
+      <p class="small-note" style="text-align:center;margin-top:14px">Sample questions are for practice only. Always check the latest official MDCAT syllabus and guidance.</p>
+    </div>
+  </section>
+  <section id="about">
+    <div class="wrap">
+      <div class="cta"><div><h2>Your medical journey starts with one step.</h2><p>Stay curious, practise regularly, and learn from your mistakes.</p></div><a class="btn" href="#practice">Start practising ↓</a></div>
+    </div>
+  </section>
+</main>
+<footer id="contact"><div class="wrap footer-row"><div><div class="footer-brand">LK MDCAT Academy</div><div class="footer-note">An independent learning project for MDCAT preparation. Add your official contact details and original study materials before publishing.</div></div><div class="footer-note">© <span id="year"></span> LK MDCAT Academy</div></div></footer>
+<script>
+const questions = [
+ {subject:"Biology",q:"Which molecule stores genetic information in most living organisms?",a:["ATP","DNA","Glucose","Protein"],correct:1,explain:"DNA stores hereditary information in most living organisms."},
+ {subject:"Biology",q:"Which organelle is the main site of aerobic respiration in eukaryotic cells?",a:["Ribosome","Mitochondrion","Golgi apparatus","Lysosome"],correct:1,explain:"Mitochondria are a major site of aerobic cellular respiration."},
+ {subject:"Biology",q:"Which blood cells help defend the body against pathogens?",a:["Red blood cells","Platelets","White blood cells","Plasma proteins only"],correct:2,explain:"White blood cells are important components of the immune system."},
+ {subject:"Biology",q:"What is the basic structural and functional unit of life?",a:["Tissue","Organ","Cell","Organ system"],correct:2,explain:"The cell is the basic structural and functional unit of living organisms."},
+ {subject:"Chemistry",q:"A solution with pH 3 is best described as:",a:["Acidic","Neutral","Basic","Always pure water"],correct:0,explain:"A pH below 7 is acidic under standard introductory chemistry conventions."},
+ {subject:"Chemistry",q:"What is the chemical symbol for sodium?",a:["S","So","Na","N"],correct:2,explain:"Sodium's symbol is Na, from the Latin name natrium."},
+ {subject:"Chemistry",q:"A covalent bond generally involves:",a:["Transfer of protons","Sharing of electron pairs","Sharing of neutrons","Loss of the nucleus"],correct:1,explain:"Covalent bonds form when atoms share electron pairs."},
+ {subject:"Chemistry",q:"How many hydrogen atoms are in one molecule of H₂O?",a:["1","2","3","4"],correct:1,explain:"The subscript 2 indicates two hydrogen atoms per water molecule."},
+ {subject:"Physics",q:"What is the SI unit of force?",a:["Joule","Watt","Newton","Pascal"],correct:2,explain:"The newton (N) is the SI unit of force."},
+ {subject:"Physics",q:"Which quantity is measured in watts?",a:["Energy","Power","Force","Electric charge"],correct:1,explain:"The watt is the SI unit of power, or energy transferred per unit time."},
+ {subject:"Physics",q:"Speed is calculated by:",a:["Distance × time","Time ÷ distance","Distance ÷ time","Mass × acceleration"],correct:2,explain:"Average speed equals total distance divided by total time."},
+ {subject:"English",q:"Choose the closest meaning of “rapid.”",a:["Slow","Quick","Quiet","Careful"],correct:1,explain:"Rapid means fast or quick."},
+ {subject:"English",q:"Choose the grammatically correct sentence.",a:["She go to class.","She going to class.","She goes to class.","She gone to class."],correct:2,explain:"With “she” in the simple present, the verb is “goes.”"},
+ {subject:"Logical Reasoning",q:"What number comes next: 2, 4, 6, 8, ...?",a:["9","10","11","12"],correct:1,explain:"The sequence increases by 2 each time, so the next number is 10."},
+ {subject:"Logical Reasoning",q:"All roses are flowers. Which statement must be true?",a:["All flowers are roses","Some roses are trees","Every rose is a flower","No flowers are roses"],correct:2,explain:"This repeats the given relationship without reversing it."}
+];
+let current=0,score=0,answered=false,activeQuestions=[...questions],finished=false;
+const questionText=document.getElementById("questionText"),answers=document.getElementById("answers"),feedback=document.getElementById("feedback"),nextBtn=document.getElementById("nextBtn"),filter=document.getElementById("subjectFilter");
+function renderQuestion(){
+ finished=false;answered=false;
+ const item=activeQuestions[current];
+ document.getElementById("quizCount").textContent=`Question ${current+1} of ${activeQuestions.length}`;
+ document.getElementById("subjectPill").textContent=item.subject.toUpperCase();
+ document.getElementById("progressFill").style.width=`${current/activeQuestions.length*100}%`;
+ questionText.textContent=item.q;answers.innerHTML="";feedback.textContent="";nextBtn.disabled=true;nextBtn.textContent="Next question →";
+ item.a.forEach((label,index)=>{const button=document.createElement("button");button.className="answer";button.textContent=`${String.fromCharCode(65+index)}. ${label}`;button.addEventListener("click",()=>chooseAnswer(index));answers.appendChild(button)});
+ document.getElementById("scoreText").textContent=`Score: ${score} / ${activeQuestions.length}`;
+}
+function chooseAnswer(index){
+ if(answered||finished)return;answered=true;const item=activeQuestions[current];const buttons=[...answers.querySelectorAll("button")];
+ buttons.forEach((b,i)=>{b.disabled=true;if(i===item.correct)b.classList.add("correct");if(i===index&&i!==item.correct)b.classList.add("wrong")});
+ if(index===item.correct){score++;feedback.textContent="Correct! "+item.explain}else{feedback.textContent="Not quite. "+item.explain}
+ document.getElementById("scoreText").textContent=`Score: ${score} / ${activeQuestions.length}`;
+ document.getElementById("progressFill").style.width=`${(current+1)/activeQuestions.length*100}%`;nextBtn.disabled=false;
+ if(current===activeQuestions.length-1)nextBtn.textContent="See results →";
+}
+function showResults(){
+ finished=true;questionText.textContent=`Quiz complete — you scored ${score} out of ${activeQuestions.length}.`;
+ answers.innerHTML="";feedback.textContent=score===activeQuestions.length?"Excellent work! You got every question right.":"Good effort! Review the explanations and try again.";
+ document.getElementById("quizCount").textContent="Results";document.getElementById("subjectPill").textContent="COMPLETED";
+ document.getElementById("progressFill").style.width="100%";document.getElementById("scoreText").textContent=`Final score: ${score} / ${activeQuestions.length}`;
+ nextBtn.textContent="Try again ↻";nextBtn.disabled=false;
+}
+function startQuiz(){
+ const selected=filter.value;
+ activeQuestions=questions.filter(q=>selected==="All"||q.subject===selected);
+ current=0;score=0;finished=false;
+ if(!activeQuestions.length){questionText.textContent="No questions available for this subject yet.";answers.innerHTML="";feedback.textContent="Choose another subject.";nextBtn.disabled=true;return}
+ renderQuestion();
+}
+nextBtn.addEventListener("click",()=>{if(finished){startQuiz();return}if(current<activeQuestions.length-1){current++;renderQuestion()}else{showResults()}});
+filter.addEventListener("change",startQuiz);
+document.getElementById("menuBtn").addEventListener("click",()=>{const nav=document.getElementById("navLinks");const open=nav.classList.toggle("open");document.getElementById("menuBtn").setAttribute("aria-expanded",String(open))});
+document.getElementById("navLinks").querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{document.getElementById("navLinks").classList.remove("open");document.getElementById("menuBtn").setAttribute("aria-expanded","false")}));
+document.getElementById("year").textContent=new Date().getFullYear();startQuiz();
+</script>
+</body>
+</html>
